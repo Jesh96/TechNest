@@ -1,0 +1,168 @@
+/* ===== PAGE HEADER ===== */
+.page-header {
+    background: linear-gradient(135deg, #1B4965, #FF6B35);
+    padding: 80px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 60% 40%, rgba(255,166,43,0.12) 0%, transparent 50%);
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to top, #F0F4F8, transparent);
+}
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 12px;
+    position: relative;
+    animation: fadeInUp 0.7s ease;
+}
+.page-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    animation: fadeInUp 0.9s ease;
+}
+/* ===== ABOUT CONTENT ===== */
+.about-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+.about-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 44px 40px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+    margin-bottom: 32px;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+.about-card:nth-child(3) { animation-delay: 0.3s; }
+.about-card h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1B4965;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.about-card h2 .icon { font-size: 1.8rem; }
+.about-card p {
+    color: #4A6580;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+.about-card p:last-child { margin-bottom: 0; }
+/* ===== FEATURES LIST ===== */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #F0F7FF;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+.feature-item:hover {
+    background: #E0EFFF;
+    transform: translateX(4px);
+}
+.feature-item .fi-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+.feature-item .fi-text {
+    font-weight: 600;
+    color: #1B4965;
+    font-size: 0.95rem;
+}
+/* ===== CONTACT SECTION ===== */
+.contact-card {
+    background: linear-gradient(135deg, #1B4965, #2C6E9B);
+    color: #fff;
+    border-radius: 20px;
+    padding: 44px 40px;
+    text-align: center;
+    box-shadow: 0 6px 30px rgba(27,73,101,0.2);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.35s forwards;
+}
+.contact-card h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.contact-card p {
+    opacity: 0.85;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+.contact-items {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.contact-item .ci-icon { font-size: 1.4rem; }
+/* ===== MOTIVATION ===== */
+.motivation-banner {
+    background: linear-gradient(135deg, #FF6B35, #FFA62B);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 6px 30px rgba(255,107,53,0.2);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.45s forwards;
+}
+.motivation-banner .quote-icon { font-size: 3rem; margin-bottom: 12px; display: block; }
+.motivation-banner h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+.motivation-banner p { font-size: 1.1rem; opacity: 0.9; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .page-header { padding: 50px 16px 40px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .about-card { padding: 28px 22px; }
+    .contact-card { padding: 28px 22px; }
+    .motivation-banner { padding: 32px 22px; }
+    .features-list { grid-template-columns: 1fr; }
+    .contact-items { flex-direction: column; align-items: center; gap: 16px; }
+}

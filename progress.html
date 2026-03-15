@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - Progress Tracker</title>
+    <link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+<nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">🔶 TechNest</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="pastpapers.html">Past Papers</a></li>
+                <li><a href="modelpapers.html">Model Papers</a></li>
+<li><a href="lessonwisepapers.html">Lesson wise papers</a></li>
+
+                <li><a href="progress.html"class="active">Progress</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav></header>
+    <div class="page-wrapper">
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>📊 Progress Tracker</h1>
+            <p>Track your exam performance over time. Add marks, visualize your progress, and stay motivated.</p>
+        </section>
+        <!-- Mark Input -->
+        <section class="input-section">
+            <div class="input-card">
+                <h3>Add Your Mark</h3>
+                <p class="hint">Enter a mark from 0 to 100 (maximum 25 entries tracked)</p>
+                <div class="mark-input-row">
+                    <input type="number" id="markInput" min="0" max="100" placeholder="Enter mark...">
+                    <button class="btn-primary" id="addMarkBtn">Add Mark</button>
+                </div>
+                <div class="input-feedback" id="inputFeedback"></div>
+            </div>
+        </section>
+        <!-- Progress Chart -->
+        <section class="chart-section">
+            <div class="chart-card">
+                <h3>📈 Your Progress Chart</h3>
+                <div class="chart-container">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <!-- Statistics -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="statAvg">--</div>
+                    <div class="stat-label">Average</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statHigh">--</div>
+                    <div class="stat-label">Highest</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statLow">--</div>
+                    <div class="stat-label">Lowest</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statLatest">--</div>
+                    <div class="stat-label">Latest</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="statTotal">0</div>
+                    <div class="stat-label">Attempts</div>
+                </div>
+            </div>
+        </section>
+        <!-- Motivation -->
+        <section class="motivation-section">
+            <div class="motivation-card start" id="motivationCard">
+                <div class="motivation-icon">🚀</div>
+                <h3>Start Your Journey!</h3>
+                <p>Add your first mark to begin tracking your progress. Every great achievement starts with a single step.</p>
+            </div>
+        </section>
+        <!-- Clear Data -->
+        <div class="clear-btn-container">
+            <button class="btn-danger" id="clearBtn">🗑 Clear All Data</button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 <span>TechNest</span> — Built for Sri Lankan A/L ICT Students 🇱🇰</p>
+    </footer>
+    <script src="js/progress.js"></script>
+</body>
+</html>
